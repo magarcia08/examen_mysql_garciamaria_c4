@@ -37,8 +37,7 @@ WHERE CURDATE() BETWEEN s.fecha_inicio AND s.fecha_fin;
 -- 6. Horas totales de consulta por médico por día de la semana.
 SELECT m.nombre, m.apellido, h.hora_inicio, h.hora_fin
 FROM medicos m
-JOIN horarios_consulta h ON m.id_medico = h.id_medico
-WHERE h.dia_semana = 'Lunes';
+JOIN horarios_consulta h ON m.id_medico = h.id_medico;
 
 
 -- 7. Médico con mayor cantidad de pacientes asignados.
